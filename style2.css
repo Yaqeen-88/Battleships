@@ -14,7 +14,7 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-/* h1 {
+h1 {
   font-family: "Press Start 2P", system-ui;
   font-size: 40px;
   color: aliceblue;
@@ -23,7 +23,7 @@ body {
     -1px 1px 0 rgb(84, 182, 248), 1px 1px 0 rgb(84, 182, 248);
   text-align: center;
   padding-top: 10px;
-} */
+}
 
 #score {
   display: grid;
