@@ -99,7 +99,7 @@ p {
   text-align: center;
 }
 
-/* .back button {
+.back button {
   height: 50px;
   width: 100px;
   font-family: "Press Start 2P", system-ui;
@@ -108,7 +108,7 @@ p {
     -1px 1px 0 rgb(84, 182, 248), 1px 1px 0 rgb(84, 182, 248);
   background-color: rgb(47, 36, 128);
   border-color: rgb(135, 127, 252);
-} */
+}
 
 .ourFriends {
   grid-area: 3/ 1/ 4/ 3;
