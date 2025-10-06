@@ -242,7 +242,7 @@ cells.forEach((cell, i) => {
       explode.style.width = "30px"
       explode.style.height = "30px"
       explode.style.pointerEvents = "none"
-      // explode.style.alignContent = "center"
+      explode.style.alignContent = "center"
 
       //play the sound
       exploSound.currentTime = 0
@@ -262,47 +262,47 @@ cells.forEach((cell, i) => {
   })
 })
 
-// //reset button
-// restartBtn.addEventListener("click", () => {
-//   //reset the variables
-//   total = 0
-//   currentHits = 0
-//   totalEnemies = 0
-//   hits.textContent = 0
-//   misses.textContent = 0
-//   totalShots.textContent = 0
+//reset button
+restartBtn.addEventListener("click", () => {
+  //reset the variables
+  total = 0
+  currentHits = 0
+  totalEnemies = 0
+  hits.textContent = 0
+  misses.textContent = 0
+  totalShots.textContent = 0
 
-//   //clearing the board
-//   cells.forEach((cell) => {
-//     cell.classList.remove("occupied", "clicked", "hit")
-//     cell.textContent = "" //removes "X"
-//     cell.innerHTML = ""
-//   })
+  //clearing the board
+  cells.forEach((cell) => {
+    cell.classList.remove("occupied", "clicked", "hit")
+    cell.textContent = "" //removes "X"
+    cell.innerHTML = ""
+  })
 
-//   //put the enemies again
-//   enemyImages.forEach((enemy) => {
-//     placeEnemy(enemy)
-//     totalEnemies += enemy.size
-//   })
+  //put the enemies again
+  enemyImages.forEach((enemy) => {
+    placeEnemy(enemy)
+    totalEnemies += enemy.size
+  })
 
-//   //hide winner msg
-//   const winMsg = document.querySelector("p")
-//   if (winMsg) {
-//     winMsg.remove()
-//   }
+  //hide winner msg
+  const winMsg = document.querySelector("p")
+  if (winMsg) {
+    winMsg.remove()
+  }
 
-// //return our friends stance to idle
-// const friendsImgs = document.querySelectorAll(".ourFriends img")
-// friendsImgs.forEach((img, i) => {
-//   if (oriFriends[i]) {
-//     img.src = oriFriends[i].url
-//     img.alt = oriFriends[i].alt
-//   }
-// })
+  // //return our friends stance to idle
+  // const friendsImgs = document.querySelectorAll(".ourFriends img")
+  // friendsImgs.forEach((img, i) => {
+  //   if (oriFriends[i]) {
+  //     img.src = oriFriends[i].url
+  //     img.alt = oriFriends[i].alt
+  //   }
+  // })
 
-// const kingImg = document.querySelector(".kingSide img")
-// if (kingImg) {
-//   kingImg.src = originalKing.url
-//   kingImg.alt = originalKing.alt
-// }
-// })
+  // const kingImg = document.querySelector(".kingSide img")
+  // if (kingImg) {
+  //   kingImg.src = originalKing.url
+  //   kingImg.alt = originalKing.alt
+  // }
+})
