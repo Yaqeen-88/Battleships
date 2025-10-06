@@ -99,40 +99,40 @@ const toIndex = (row, col) => {
 const winSound = new Audio("sounds/you_win.mp3")
 winSound.volume = 0.6
 
-// //winner function
-// const winState = () => {
-//   const friendImgs = document.querySelectorAll(".ourFriends img")
-//   const kingLoses = document.querySelector(".kingSide img")
-//   winFriends.forEach((friend, i) => {
-//     if (friendImgs[i]) {
-//       friendImgs[i].src = friend.url
-//       friendImgs[i].alt = friend.name
-//     }
-//   })
-//   kingLoses.src =
-//     "https://static.wikia.nocookie.net/deltarune/images/f/f3/King_battle_weakened.png"
+//winner function
+const winState = () => {
+  const friendImgs = document.querySelectorAll(".ourFriends img")
+  const kingLoses = document.querySelector(".kingSide img")
+  winFriends.forEach((friend, i) => {
+    if (friendImgs[i]) {
+      friendImgs[i].src = friend.url
+      friendImgs[i].alt = friend.name
+    }
+  })
+  kingLoses.src =
+    "https://static.wikia.nocookie.net/deltarune/images/f/f3/King_battle_weakened.png"
 
-//   //win msg
-//   const winMessage = document.createElement("p")
-//   winMessage.textContent = "You did it! You saved us!"
-//   winMessage.style.fontFamily = "'Press Start 2P', system-ui"
-//   winMessage.style.color = "aliceblue"
-//   winMessage.style.fontSize = "30px"
-//   winMessage.style.lineHeight = "30px"
-//   winMessage.style.alignContent = "center"
-//   winMessage.style.textAlign = "center"
-//   winMessage.style.padding = "6px"
-//   winMessage.style.textShadow =
-//     "-1px -1px 0 rgb(84, 182, 248), 1px -1px 0 rgb(84, 182, 248), -1px 1px 0 rgb(84, 182, 248), 1px 1px 0 rgb(84, 182, 248)"
-//   winMessage.style.gridArea = "2/ 1/ 3/ 3"
-//   winMessage.style.border = "2px solid rgb(63, 56, 192)"
-//   winMessage.style.backgroundColor = "black"
+  //win msg
+  const winMessage = document.createElement("p")
+  winMessage.textContent = "You did it! You saved us!"
+  winMessage.style.fontFamily = "'Press Start 2P', system-ui"
+  winMessage.style.color = "aliceblue"
+  winMessage.style.fontSize = "30px"
+  winMessage.style.lineHeight = "30px"
+  winMessage.style.alignContent = "center"
+  winMessage.style.textAlign = "center"
+  winMessage.style.padding = "6px"
+  winMessage.style.textShadow =
+    "-1px -1px 0 rgb(84, 182, 248), 1px -1px 0 rgb(84, 182, 248), -1px 1px 0 rgb(84, 182, 248), 1px 1px 0 rgb(84, 182, 248)"
+  winMessage.style.gridArea = "2/ 1/ 3/ 3"
+  winMessage.style.border = "2px solid rgb(63, 56, 192)"
+  winMessage.style.backgroundColor = "black"
 
-//   document.body.appendChild(winMessage)
+  document.body.appendChild(winMessage)
 
-//   winSound.currentTime = 0
-//   winSound.play()
-// }
+  winSound.currentTime = 0
+  winSound.play()
+}
 
 //placing enemies on the board
 const placeEnemy = (enemy) => {
