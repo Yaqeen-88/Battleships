@@ -12,17 +12,17 @@ const occupied = []
 let totalEnemies = 0
 let currentHits = 0
 
-// //make the board
-// for (let row = 0; row < gridSize; row++) {
-//   for (let col = 0; col < gridSize; col++) {
-//     const cell = document.createElement("div")
-//     cell.classList.add("cell")
-//     cell.dataset.row = row
-//     cell.dataset.col = col
-//     board.appendChild(cell)
-//   }
-// }
-// cells = document.querySelectorAll(".cell")
+//make the board
+for (let row = 0; row < gridSize; row++) {
+  for (let col = 0; col < gridSize; col++) {
+    const cell = document.createElement("div")
+    cell.classList.add("cell")
+    cell.dataset.row = row
+    cell.dataset.col = col
+    board.appendChild(cell)
+  }
+}
+cells = document.querySelectorAll(".cell")
 
 //enemies used (the ships but not really)
 const enemyImages = [
@@ -87,6 +87,7 @@ const originalKing = {
 //explosion sound
 const exploSound = new Audio("sounds/explosion.mp3")
 exploSound.volume = 0.6
+
 //trying to do an effect when HIT
 const explosion =
   "https://www.spriters-resource.com/media/asset_icons/159/162192.gif"
@@ -98,40 +99,40 @@ const toIndex = (row, col) => {
 const winSound = new Audio("sounds/you_win.mp3")
 winSound.volume = 0.6
 
-//winner function
-const winState = () => {
-  const friendImgs = document.querySelectorAll(".ourFriends img")
-  const kingLoses = document.querySelector(".kingSide img")
-  winFriends.forEach((friend, i) => {
-    if (friendImgs[i]) {
-      friendImgs[i].src = friend.url
-      friendImgs[i].alt = friend.name
-    }
-  })
-  kingLoses.src =
-    "https://static.wikia.nocookie.net/deltarune/images/f/f3/King_battle_weakened.png"
+// //winner function
+// const winState = () => {
+//   const friendImgs = document.querySelectorAll(".ourFriends img")
+//   const kingLoses = document.querySelector(".kingSide img")
+//   winFriends.forEach((friend, i) => {
+//     if (friendImgs[i]) {
+//       friendImgs[i].src = friend.url
+//       friendImgs[i].alt = friend.name
+//     }
+//   })
+//   kingLoses.src =
+//     "https://static.wikia.nocookie.net/deltarune/images/f/f3/King_battle_weakened.png"
 
-  //win msg
-  const winMessage = document.createElement("p")
-  winMessage.textContent = "You did it! You saved us!"
-  winMessage.style.fontFamily = "'Press Start 2P', system-ui"
-  winMessage.style.color = "aliceblue"
-  winMessage.style.fontSize = "30px"
-  winMessage.style.lineHeight = "30px"
-  winMessage.style.alignContent = "center"
-  winMessage.style.textAlign = "center"
-  winMessage.style.padding = "6px"
-  winMessage.style.textShadow =
-    "-1px -1px 0 rgb(84, 182, 248), 1px -1px 0 rgb(84, 182, 248), -1px 1px 0 rgb(84, 182, 248), 1px 1px 0 rgb(84, 182, 248)"
-  winMessage.style.gridArea = "2/ 1/ 3/ 3"
-  winMessage.style.border = "2px solid rgb(63, 56, 192)"
-  winMessage.style.backgroundColor = "black"
+//   //win msg
+//   const winMessage = document.createElement("p")
+//   winMessage.textContent = "You did it! You saved us!"
+//   winMessage.style.fontFamily = "'Press Start 2P', system-ui"
+//   winMessage.style.color = "aliceblue"
+//   winMessage.style.fontSize = "30px"
+//   winMessage.style.lineHeight = "30px"
+//   winMessage.style.alignContent = "center"
+//   winMessage.style.textAlign = "center"
+//   winMessage.style.padding = "6px"
+//   winMessage.style.textShadow =
+//     "-1px -1px 0 rgb(84, 182, 248), 1px -1px 0 rgb(84, 182, 248), -1px 1px 0 rgb(84, 182, 248), 1px 1px 0 rgb(84, 182, 248)"
+//   winMessage.style.gridArea = "2/ 1/ 3/ 3"
+//   winMessage.style.border = "2px solid rgb(63, 56, 192)"
+//   winMessage.style.backgroundColor = "black"
 
-  document.body.appendChild(winMessage)
+//   document.body.appendChild(winMessage)
 
-  winSound.currentTime = 0
-  winSound.play()
-}
+//   winSound.currentTime = 0
+//   winSound.play()
+// }
 
 //placing enemies on the board
 const placeEnemy = (enemy) => {
