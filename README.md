@@ -1,7 +1,7 @@
 # Battleships
 
 ## Description
-This project will be about battleships! the classic board game, but with a special theme! when the game starts, the enemies will be distributed on the board randomly. There are 5 enemies, each would take different amount of spaces on the board (from 1 to 5 spaces). You need to find the enemies with the least amount of misses. There will be a scoreboard that records hits, misses, and total shots.
+This project will be about battleships! the classic board game, but with a special theme! when the game starts, the enemies will be distributed on the board randomly. There are 5 enemies, each would take different amount of spaces on the board (from 1 to 5 spaces). You need to find the enemies with the least amount of misses. There will be a scoreboard that records hits, misses, and total shots. You can play the game using this link : [Play Game](http://battleships-deltarune.surge.sh)
 
 ![Deltarune-dance](https://i.pinimg.com/originals/72/7f/5f/727f5fb6e3a42169722fdea7f4e21c35.gif)
 
