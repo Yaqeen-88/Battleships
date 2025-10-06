@@ -291,18 +291,18 @@ restartBtn.addEventListener("click", () => {
     winMsg.remove()
   }
 
-  // //return our friends stance to idle
-  // const friendsImgs = document.querySelectorAll(".ourFriends img")
-  // friendsImgs.forEach((img, i) => {
-  //   if (oriFriends[i]) {
-  //     img.src = oriFriends[i].url
-  //     img.alt = oriFriends[i].alt
-  //   }
-  // })
+  //return our friends stance to idle
+  const friendsImgs = document.querySelectorAll(".ourFriends img")
+  friendsImgs.forEach((img, i) => {
+    if (oriFriends[i]) {
+      img.src = oriFriends[i].url
+      img.alt = oriFriends[i].alt
+    }
+  })
 
-  // const kingImg = document.querySelector(".kingSide img")
-  // if (kingImg) {
-  //   kingImg.src = originalKing.url
-  //   kingImg.alt = originalKing.alt
-  // }
+  const kingImg = document.querySelector(".kingSide img")
+  if (kingImg) {
+    kingImg.src = originalKing.url
+    kingImg.alt = originalKing.alt
+  }
 })
